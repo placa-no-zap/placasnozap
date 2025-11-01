@@ -39,7 +39,11 @@ const HeroSection = () => {
                 <MessageCircle className="h-5 w-5 group-hover:rotate-12 transition-transform" />
                 Consultar Agora
               </Button>
-              <Button size="xl" variant="outline">
+              <Button 
+                size="xl" 
+                variant="outline"
+                onClick={() => document.getElementById('como-funciona')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Como Funciona
               </Button>
             </div>
