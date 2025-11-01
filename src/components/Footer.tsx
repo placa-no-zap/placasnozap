@@ -24,7 +24,12 @@ const Footer = () => {
               >
                 Como Funciona
               </li>
-              <li>O Que Consultamos</li>
+              <li 
+                className="cursor-pointer hover:text-foreground transition-colors"
+                onClick={() => document.getElementById('o-que-consultamos')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                O Que Consultamos
+              </li>
               <li>Perguntas Frequentes</li>
             </ul>
           </div>

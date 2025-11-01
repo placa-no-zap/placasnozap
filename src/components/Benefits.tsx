@@ -25,7 +25,7 @@ const benefits = [
 
 const Benefits = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-background to-primary/5">
+    <section id="o-que-consultamos" className="py-24 bg-gradient-to-b from-background to-primary/5">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl font-bold mb-4">O Que Você Descobre</h2>
