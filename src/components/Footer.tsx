@@ -14,31 +14,36 @@ const Footer = () => {
               Consulta de placas de veículos rápida, segura e 100% online via WhatsApp.
             </p>
           </div>
-          
+
           <div className="space-y-4">
             <h3 className="font-semibold">Informações</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li 
+              <li
                 className="cursor-pointer hover:text-foreground transition-colors"
                 onClick={() => document.getElementById('como-funciona')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Como Funciona
               </li>
-              <li 
+              <li
                 className="cursor-pointer hover:text-foreground transition-colors"
                 onClick={() => document.getElementById('o-que-consultamos')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 O Que Consultamos
               </li>
-              <li>Perguntas Frequentes</li>
+              <li
+                className="cursor-pointer hover:text-foreground transition-colors"
+                onClick={() => document.getElementById('perguntas-frequentes')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Perguntas Frequentes
+              </li>
             </ul>
           </div>
-          
+
           <div className="space-y-4">
             <h3 className="font-semibold">Contato</h3>
-            <a 
-              href="https://wa.me/5511999999999" 
-              target="_blank" 
+            <a
+              href="https://wa.me/5511999999999"
+              target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"
             >
@@ -47,7 +52,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        
+
         <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Placa no Zap. Todos os direitos reservados.</p>
         </div>
