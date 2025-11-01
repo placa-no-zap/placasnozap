@@ -8,18 +8,30 @@ import {
 const faqItems = [
   {
     question: "Quais as formas de pagamento da consulta?",
-    answer: "Qualquer consulta pode ser paga PIX",
+    answer: "Qualquer consulta pode ser paga com PIX.",
   },
   {
     question: "Em quanto tempo receberei o relatório após o pagamento?",
     answer:
-      "Na grande maioria dos casos o relatório completo é enviado em poucos minutos após a confirmação do pagamento. Em raros os casos, pode ocorrer indisponibilidade no serviço de alguma de nossas fontes, neste caso, o relatório será gerado e enviado para seu WhatsApp assim que restabelecido o serviço.",
+      "Na grande maioria dos casos o relatório completo é enviado em poucos minutos após a confirmação do pagamento. Em raros os casos, pode ocorrer indisponibilidade no serviço de alguma de nossas fontes. Neste caso, o relatório será gerado e enviado para seu WhatsApp assim que o serviço for restabelecido.",
   },
   {
     question:
       "Caso eu não receba o relatório completo após o pagamento, como devo proceder?",
-    answer:
-      "Você poderá abrir um chamado utilizando o formulário de contato no endereço https://placanozap.com.br/contato.",
+    answer: (
+      <>
+        Você poderá abrir um chamado utilizando o{" "}
+        <a
+          href="https://placanozap.com.br/contato"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary underline hover:text-primary/80"
+        >
+          formulário de contato
+        </a>
+        .
+      </>
+    ),
   },
 ];
 
