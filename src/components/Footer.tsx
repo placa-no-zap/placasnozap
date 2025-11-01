@@ -18,7 +18,12 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold">Informações</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Como Funciona</li>
+              <li 
+                className="cursor-pointer hover:text-foreground transition-colors"
+                onClick={() => document.getElementById('como-funciona')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Como Funciona
+              </li>
               <li>O Que Consultamos</li>
               <li>Perguntas Frequentes</li>
             </ul>
