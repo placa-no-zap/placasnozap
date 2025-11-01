@@ -13,13 +13,13 @@ const faqItems = [
   {
     question: "Em quanto tempo receberei o relatório após o pagamento?",
     answer:
-      "Na grande maioria dos casos o relatório completo é enviado em poucos minutos após a confirmação do pagamento. Em raros os casos, pode ocorrer indisponibilidade no serviço de alguma de nossas fontes, neste caso, o relatório será gerado e enviado para seu email assim que restabelecido o serviço.",
+      "Na grande maioria dos casos o relatório completo é enviado em poucos minutos após a confirmação do pagamento. Em raros os casos, pode ocorrer indisponibilidade no serviço de alguma de nossas fontes, neste caso, o relatório será gerado e enviado para seu WhatsApp assim que restabelecido o serviço.",
   },
   {
     question:
       "Caso eu não receba o relatório completo após o pagamento, como devo proceder?",
     answer:
-      "Como o relatório é encaminhado automaticamente para o email cadastrado na consulta, é importante verificar se o mesmo não caiu na caixa de SPAM. Caso contrário, você poderá abrir um chamado enviando email para contato@consultarplaca.com.br solicitando o reenvio.",
+      "Você poderá abrir um chamado utilizando o formulário de contato no endereço https://placanozap.com.br/contato.",
   },
 ];
 
