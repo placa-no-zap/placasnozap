@@ -1,4 +1,5 @@
-import { MessageCircle, Shield } from "lucide-react";
+import { MessageCircle } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -6,9 +7,8 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <Shield className="h-6 w-6 text-primary" />
-              <span className="font-bold text-xl">Placa no Zap</span>
+            <div className="flex items-center">
+              <img src={logo} alt="Placa no Zap" className="h-12 w-auto" />
             </div>
             <p className="text-muted-foreground text-sm">
               Consulta de placas de veículos rápida, segura e 100% online via WhatsApp.
