@@ -8,7 +8,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div className="space-y-4">
             <div className="flex items-center">
-              <img src={logo} alt="Placa no Zap" className="h-12 w-auto" />
+              <img src={logo} alt="Placas no Zap" className="h-16 w-auto" />
+              <span className="font-bold text-xl">Placas no Zap</span>
             </div>
             <p className="text-muted-foreground text-sm">
               Consulta de placas de veículos rápida, segura e 100% online via WhatsApp.
@@ -54,7 +55,7 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Placa no Zap. Todos os direitos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Placas no Zap. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

@@ -26,7 +26,7 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-xl text-muted-foreground max-w-2xl">
-              Descubra a real situação do veículo antes de comprar. Verificamos débitos, sinistros, restrições e muito mais em segundos.
+              Descubra a real situação do veículo antes de comprar. Verificamos débitos, sinistros, restrições e muito mais direto no WhatsApp.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
