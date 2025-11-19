@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const planos = [
   {
@@ -92,7 +91,7 @@ const Planos = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col">
-                  <div className="border-t border-border pt-6 mb-6 flex-1">
+                  <div className="border-t border-border pt-6 flex-1">
                     <ul className="space-y-3 text-sm text-muted-foreground">
                       {plano.recursos.map((recurso, idx) => (
                         <li key={idx} className="flex items-start gap-2">
@@ -108,9 +107,6 @@ const Planos = () => {
                       ))}
                     </ul>
                   </div>
-                  <Button className="w-full" size="lg">
-                    Escolher Plano
-                  </Button>
                 </CardContent>
               </Card>
             ))}
