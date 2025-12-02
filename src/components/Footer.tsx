@@ -1,5 +1,6 @@
 import { MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { WHATSAPP_NUMBER } from "@/lib/whatsapp";
 
 const Footer = () => {
   return (
@@ -43,7 +44,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold">Contato</h3>
             <a
-              href="https://wa.me/5511999999999"
+              href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"

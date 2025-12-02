@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, ShieldCheck } from "lucide-react";
 import heroImage from "@/assets/hero-car.jpg";
+import { WHATSAPP_NUMBER } from "@/lib/whatsapp";
 
 const HeroSection = () => {
-  const whatsappNumber = "5511999999999"; // Substitua pelo número real
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de consultar uma placa de veículo.");
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-background to-primary/5">
