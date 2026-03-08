@@ -1,7 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check } from "lucide-react";
+import { Check, MessageCircle } from "lucide-react";
+import { WHATSAPP_NUMBER } from "@/lib/whatsapp";
+import { Button } from "@/components/ui/button";
 
 const planos = [
   {
@@ -11,11 +13,14 @@ const planos = [
       "Nome",
       "Genero",
       "Idade",
-      "Situacao",
+      "Situacao do CPF",
       "Cidade e Estado de Nascimento",
     ],
   },
 ];
+
+const whatsappMessage = encodeURIComponent("Olá! Gostaria de consultar um CPF.");
+const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
 
 const CpfPlanos = () => {
   return (
@@ -25,11 +30,23 @@ const CpfPlanos = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-              Planos de Consulta CPF
+              Planos de Consulta de CPF
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Consulte dados cadastrais essenciais com retorno rapido e objetivo via WhatsApp.
+              Consulte dados cadastrais de um CPF
             </p>
+          </div>
+
+          <div className="text-center mb-12">
+            <Button
+              size="xl"
+              variant="hero"
+              className="group"
+              onClick={() => window.open(whatsappUrl, '_blank')}
+            >
+              <MessageCircle className="h-5 w-5 group-hover:rotate-12 transition-transform" />
+              Consultar Agora
+            </Button>
           </div>
 
           <div className="max-w-md mx-auto">
