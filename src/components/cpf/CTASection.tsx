@@ -31,7 +31,7 @@ const CTASection = () => {
             >
               <Link to="/cpf/planos">
                 <MessageCircle className="h-5 w-5 group-hover:rotate-12 transition-transform" />
-                Ver Planos e Consultar
+                Ver Planos
               </Link>
             </Button>
           </div>

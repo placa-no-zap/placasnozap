@@ -37,18 +37,6 @@ const CpfPlanos = () => {
             </p>
           </div>
 
-          <div className="text-center mb-12">
-            <Button
-              size="xl"
-              variant="hero"
-              className="group"
-              onClick={() => window.open(whatsappUrl, '_blank')}
-            >
-              <MessageCircle className="h-5 w-5 group-hover:rotate-12 transition-transform" />
-              Consultar Agora
-            </Button>
-          </div>
-
           <div className="max-w-md mx-auto">
             <Card className="flex flex-col hover:shadow-lg transition-shadow duration-300">
               <CardHeader className="text-center pb-4">

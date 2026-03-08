@@ -49,7 +49,7 @@ const HeroSection = () => {
           <div className="flex items-center gap-8 justify-center text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <div className="h-2 w-2 bg-primary rounded-full animate-pulse"></div>
-              Resposta em minutos
+              Resposta em segundos
             </div>
             <div className="flex items-center gap-2">
               <div className="h-2 w-2 bg-primary rounded-full animate-pulse"></div>
