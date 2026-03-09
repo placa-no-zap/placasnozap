@@ -20,6 +20,7 @@ Placas no Zap is a frontend-only single-page application that markets vehicle pl
 |-- src/
 |   |-- components/         # Page sections and shared components
 |   |   |-- ui/             # shadcn/ui primitives
+|   |   |-- cpf/            # CPF-specific section components
 |   |   |-- Header.tsx
 |   |   |-- HeroSection.tsx
 |   |   |-- HowItWorks.tsx
@@ -46,7 +47,10 @@ Placas no Zap is a frontend-only single-page application that markets vehicle pl
 | Path | Page | Description |
 | --- | --- | --- |
 | `/` | `Index` | Landing page with hero, how it works, benefits, CTA, FAQ, and footer |
-| `/planos` | `Planos` | Pricing page with four consultation tiers |
+| `/placas/planos` | `PlacasPlanos` | Vehicle plate consultation pricing (4 tiers) |
+| `/cpf` | `Cpf` | CPF consultation landing page |
+| `/cpf/planos` | `CpfPlanos` | CPF consultation pricing |
+| `/planos` | — | Legacy redirect → `/placas/planos` |
 | `*` | `NotFound` | Catch-all 404 page |
 
 ## Application Architecture
@@ -56,7 +60,10 @@ flowchart TD
     mainTsx --> appRoot["src/App.tsx"]
     appRoot --> providers["QueryClientProvider + TooltipProvider + Toaster"]
     appRoot --> routeIndex["/"]
-    appRoot --> routePlanos["/planos"]
+    appRoot --> routePlacasPlanos["/placas/planos"]
+    appRoot --> routeCpf["/cpf"]
+    appRoot --> routeCpfPlanos["/cpf/planos"]
+    appRoot --> routeLegacy["/planos → redirect"]
     appRoot --> routeNotFound["*"]
     routeIndex --> headerA["Header"]
     routeIndex --> hero["HeroSection"]
@@ -65,9 +72,15 @@ flowchart TD
     routeIndex --> ctaSection["CTASection"]
     routeIndex --> faq["FAQ"]
     routeIndex --> footerA["Footer"]
-    routePlanos --> headerB["Header"]
-    routePlanos --> pricing["Pricing cards"]
-    routePlanos --> footerB["Footer"]
+    routePlacasPlanos --> headerB["Header"]
+    routePlacasPlanos --> pricing["Pricing cards (4 tiers)"]
+    routePlacasPlanos --> footerB["Footer"]
+    routeCpf --> cpfHero["cpf/HeroSection"]
+    routeCpf --> cpfHowItWorks["cpf/HowItWorks"]
+    routeCpf --> cpfBenefits["cpf/Benefits"]
+    routeCpf --> cpfCta["cpf/CTASection"]
+    routeCpf --> cpfFaq["cpf/FAQ"]
+    routeCpfPlanos --> cpfPricing["CPF pricing card"]
 ```
 
 ## User Flow
@@ -83,7 +96,9 @@ flowchart LR
 ## Key Modules
 - `src/App.tsx`: Initializes the React Query client, UI providers, and browser routes.
 - `src/pages/Index.tsx`: Composes the landing page from reusable section components.
-- `src/pages/Planos.tsx`: Defines and renders the four pricing plans.
+- `src/pages/PlacasPlanos.tsx`: Vehicle plate consultation pricing (4 tiers).
+- `src/pages/Cpf.tsx`: CPF consultation landing page (uses `src/components/cpf/` sections).
+- `src/pages/CpfPlanos.tsx`: CPF consultation pricing.
 - `src/lib/whatsapp.ts`: Stores the WhatsApp number used by CTA links.
 - `src/lib/utils.ts`: Exposes `cn()` for Tailwind class merging.
 - `src/hooks/use-mobile.tsx`: Detects mobile viewport state using a `768px` breakpoint.
@@ -93,6 +108,7 @@ flowchart LR
 The app uses a two-level UI structure:
 
 - Page sections in `src/components/` implement the marketing content and page composition.
+- CPF-specific sections in `src/components/cpf/` mirror the shared section components for the CPF product.
 - Reusable primitives in `src/components/ui/` provide the shadcn/ui component library. The repository currently includes 48 UI primitives such as `button`, `card`, `accordion`, `dialog`, `toast`, and `form`.
 
 `components.json` configures shadcn/ui with the `slate` base color, CSS variables, and the `@/` path aliases used throughout the app.
