@@ -61,7 +61,7 @@ const planos = [
   },
 ];
 
-const Planos = () => {
+const PlacasPlanos = () => {
   return (
     <main className="min-h-screen bg-background">
       <Header />
@@ -75,11 +75,11 @@ const Planos = () => {
               Escolha o plano ideal para consultar o histórico do seu veículo
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {planos.map((plano, index) => (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className="flex flex-col hover:shadow-lg transition-shadow duration-300"
               >
                 <CardHeader className="text-center pb-4">
@@ -118,4 +118,4 @@ const Planos = () => {
   );
 };
 
-export default Planos;
+export default PlacasPlanos;

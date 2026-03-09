@@ -1,6 +1,13 @@
 import logo from "@/assets/logo.png";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { ChevronDown } from "lucide-react";
 
 const Header = () => {
   return (
@@ -11,9 +18,22 @@ const Header = () => {
             <img src={logo} alt="Placas no Zap" className="h-16 w-auto" />
             <span className="font-bold text-xl">Placas no Zap</span>
           </Link>
-          <Link to="/planos">
-            <Button variant="outline">Ver Planos</Button>
-          </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline">
+                Ver Planos
+                <ChevronDown className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem asChild>
+                <Link to="/placas/planos">Consulta de Placas</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/cpf/planos">Consulta de CPF</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
     </header>
