@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
 
@@ -21,6 +22,11 @@ const plans = [
 const CpfPlanos = () => {
   return (
     <main className="min-h-screen bg-background">
+      <SEO
+        title="Planos de Consulta de CPF | Placas no Zap"
+        description="Consulte dados cadastrais de um CPF. Plano Simples R$1,99 com situação do CPF, nome, gênero, idade e cidade de nascimento."
+        path="/cpf/planos"
+      />
       <Header />
       <section className="py-20">
         <div className="container mx-auto px-4">

@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
 
@@ -64,6 +65,11 @@ const planos = [
 const PlacasPlanos = () => {
   return (
     <main className="min-h-screen bg-background">
+      <SEO
+        title="Planos de Consulta de Placas | Placas no Zap"
+        description="Escolha o plano ideal para consultar o histórico do seu veículo. Consulta Simples R$29,90, Intermediária R$49,90, Avançada R$59,90, Completa R$74,90."
+        path="/placas/planos"
+      />
       <Header />
       <section className="py-20">
         <div className="container mx-auto px-4">

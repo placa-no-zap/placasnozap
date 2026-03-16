@@ -1,4 +1,5 @@
 import { MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import { WHATSAPP_NUMBER } from "@/lib/whatsapp";
 
@@ -20,23 +21,30 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold">Informações</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li
-                className="cursor-pointer hover:text-foreground transition-colors"
-                onClick={() => document.getElementById('como-funciona')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Como Funciona
+              <li>
+                <a href="#como-funciona" className="hover:text-foreground transition-colors">
+                  Como Funciona
+                </a>
               </li>
-              <li
-                className="cursor-pointer hover:text-foreground transition-colors"
-                onClick={() => document.getElementById('o-que-consultamos')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                O Que Consultamos
+              <li>
+                <a href="#o-que-consultamos" className="hover:text-foreground transition-colors">
+                  O Que Consultamos
+                </a>
               </li>
-              <li
-                className="cursor-pointer hover:text-foreground transition-colors"
-                onClick={() => document.getElementById('perguntas-frequentes')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Perguntas Frequentes
+              <li>
+                <a href="#perguntas-frequentes" className="hover:text-foreground transition-colors">
+                  Perguntas Frequentes
+                </a>
+              </li>
+              <li>
+                <Link to="/placas/planos" className="hover:text-foreground transition-colors">
+                  Planos de Placas
+                </Link>
+              </li>
+              <li>
+                <Link to="/cpf/planos" className="hover:text-foreground transition-colors">
+                  Planos de CPF
+                </Link>
               </li>
             </ul>
           </div>

@@ -18,7 +18,8 @@ const Header = () => {
             <img src={logo} alt="Placas no Zap" className="h-16 w-auto" />
             <span className="font-bold text-xl">Placas no Zap</span>
           </Link>
-          <DropdownMenu>
+          <nav aria-label="Planos">
+            <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline">
                 Ver Planos
@@ -34,6 +35,7 @@ const Header = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+          </nav>
         </div>
       </div>
     </header>

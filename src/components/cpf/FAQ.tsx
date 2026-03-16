@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Helmet } from "react-helmet-async";
 
 const faqItems = [
   {
@@ -22,7 +23,7 @@ const faqItems = [
       <>
         Você poderá abrir um chamado utilizando o{" "}
         <a
-          href="https://placanozap.com.br/contato"
+          href="https://placasnozap.com.br/contato"
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary underline hover:text-primary/80"
@@ -32,6 +33,7 @@ const faqItems = [
         .
       </>
     ),
+    answerText: "Você poderá abrir um chamado utilizando o formulário de contato em https://placasnozap.com.br/contato.",
   },
   {
     question: "Quais informações são retornadas na consulta de CPF?",
@@ -40,9 +42,25 @@ const faqItems = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: "answerText" in item ? item.answerText : item.answer,
+    },
+  })),
+};
+
 const FAQ = () => {
   return (
     <section id="perguntas-frequentes" className="py-24 bg-card">
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl font-bold mb-4">Perguntas Frequentes</h2>
