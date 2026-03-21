@@ -5,7 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { Analytics } from "@vercel/analytics/react";
-import Index from "./pages/Index";
+import Home from "./pages/Home";
+import Placas from "./pages/Placas";
 import Cpf from "./pages/Cpf";
 import CpfPlanos from "./pages/CpfPlanos";
 import NotFound from "./pages/NotFound";
@@ -22,7 +23,8 @@ const App = () => (
         <Analytics />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/placas" element={<Placas />} />
             <Route path="/planos" element={<Navigate to="/placas/planos" replace />} />
             <Route path="/placas/planos" element={<PlacasPlanos />} />
             <Route path="/cpf" element={<Cpf />} />

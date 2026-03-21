@@ -1,7 +1,7 @@
 # Architecture
 
 ## Overview
-Placas no Zap is a frontend-only single-page application that markets vehicle plate lookup services and directs users to WhatsApp to start a consultation. The repository contains the public website, pricing page, shared UI primitives, and deployment configuration, but no backend, database, or serverless API routes.
+Info no Zap is a frontend-only single-page application that markets vehicle plate and CPF lookup services and directs users to WhatsApp to start a consultation. The repository contains the public website, pricing pages, shared UI primitives, and deployment configuration, but no backend, database, or serverless API routes.
 
 ## Tech Stack
 - Runtime: Node.js `25.1.0`, Bun `1.3.1`
@@ -46,7 +46,8 @@ Placas no Zap is a frontend-only single-page application that markets vehicle pl
 ## Routes
 | Path | Page | Description |
 | --- | --- | --- |
-| `/` | `Index` | Landing page with hero, how it works, benefits, CTA, FAQ, and footer |
+| `/` | `Home` | Product hub: links to placas and CPF landings |
+| `/placas` | `Placas` | Vehicle plate landing (hero, how it works, benefits, CTA, FAQ) |
 | `/placas/planos` | `PlacasPlanos` | Vehicle plate consultation pricing (4 tiers) |
 | `/cpf` | `Cpf` | CPF consultation landing page |
 | `/cpf/planos` | `CpfPlanos` | CPF consultation pricing |
@@ -59,19 +60,23 @@ flowchart TD
     indexHtml["index.html"] --> mainTsx["src/main.tsx"]
     mainTsx --> appRoot["src/App.tsx"]
     appRoot --> providers["QueryClientProvider + TooltipProvider + Toaster"]
-    appRoot --> routeIndex["/"]
+    appRoot --> routeHome["/"]
+    appRoot --> routePlacas["/placas"]
     appRoot --> routePlacasPlanos["/placas/planos"]
     appRoot --> routeCpf["/cpf"]
     appRoot --> routeCpfPlanos["/cpf/planos"]
     appRoot --> routeLegacy["/planos → redirect"]
     appRoot --> routeNotFound["*"]
-    routeIndex --> headerA["Header"]
-    routeIndex --> hero["HeroSection"]
-    routeIndex --> howItWorks["HowItWorks"]
-    routeIndex --> benefits["Benefits"]
-    routeIndex --> ctaSection["CTASection"]
-    routeIndex --> faq["FAQ"]
-    routeIndex --> footerA["Footer"]
+    routeHome --> headerHome["Header"]
+    routeHome --> homeHero["Home hero + product cards"]
+    routeHome --> footerHome["Footer"]
+    routePlacas --> headerA["Header"]
+    routePlacas --> hero["HeroSection"]
+    routePlacas --> howItWorks["HowItWorks"]
+    routePlacas --> benefits["Benefits"]
+    routePlacas --> ctaSection["CTASection"]
+    routePlacas --> faq["FAQ"]
+    routePlacas --> footerA["Footer"]
     routePlacasPlanos --> headerB["Header"]
     routePlacasPlanos --> pricing["Pricing cards (4 tiers)"]
     routePlacasPlanos --> footerB["Footer"]
@@ -86,7 +91,7 @@ flowchart TD
 ## User Flow
 ```mermaid
 flowchart LR
-    visit["User visits site"] --> home["Landing page or /planos"]
+    visit["User visits site"] --> home["Home or product page"]
     home --> explore["Reads marketing content or pricing"]
     explore --> clickCta["Clicks WhatsApp CTA"]
     clickCta --> whatsapp["wa.me link opens with pre-filled message"]
@@ -95,7 +100,8 @@ flowchart LR
 
 ## Key Modules
 - `src/App.tsx`: Initializes the React Query client, UI providers, and browser routes.
-- `src/pages/Index.tsx`: Composes the landing page from reusable section components.
+- `src/pages/Home.tsx`: Product hub linking to placas and CPF flows.
+- `src/pages/Placas.tsx`: Composes the vehicle plate landing page from reusable section components.
 - `src/pages/PlacasPlanos.tsx`: Vehicle plate consultation pricing (4 tiers).
 - `src/pages/Cpf.tsx`: CPF consultation landing page (uses `src/components/cpf/` sections).
 - `src/pages/CpfPlanos.tsx`: CPF consultation pricing.
@@ -126,7 +132,7 @@ TanStack React Query is configured at the app root, but there are currently no `
 - `index.html` includes the Google Ads `gtag.js` snippet for conversion tracking.
 - `vite.config.ts` defines the dev server on port `8080` and the `@` alias to `src`.
 - `vercel.json` rewrites all non-file routes to `/`, enabling SPA routing in production.
-- The project is intended to be published through Lovable and deployed on Vercel at `https://placasnozap.com.br`.
+- The project is intended to be published through Lovable and deployed on Vercel at `https://infonozap.com.br`.
 
 ## Development
 Common local commands:

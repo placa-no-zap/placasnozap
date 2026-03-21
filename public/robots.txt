@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://placasnozap.com.br/sitemap.xml
+Sitemap: https://infonozap.com.br/sitemap.xml

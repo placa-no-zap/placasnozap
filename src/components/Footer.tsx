@@ -10,11 +10,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div className="space-y-4">
             <div className="flex items-center">
-              <img src={logo} alt="Placas no Zap" className="h-16 w-auto" />
-              <span className="font-bold text-xl">Placas no Zap</span>
+              <img src={logo} alt="Info no Zap" className="h-16 w-auto" />
+              <span className="font-bold text-xl">Info no Zap</span>
             </div>
             <p className="text-muted-foreground text-sm">
-              Consulta de placas de veículos rápida, segura e 100% online via WhatsApp.
+              Consultas rápidas, seguras e 100% online via WhatsApp.
             </p>
           </div>
 
@@ -22,23 +22,18 @@ const Footer = () => {
             <h3 className="font-semibold">Informações</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="#como-funciona" className="hover:text-foreground transition-colors">
-                  Como Funciona
-                </a>
-              </li>
-              <li>
-                <a href="#o-que-consultamos" className="hover:text-foreground transition-colors">
-                  O Que Consultamos
-                </a>
-              </li>
-              <li>
-                <a href="#perguntas-frequentes" className="hover:text-foreground transition-colors">
-                  Perguntas Frequentes
-                </a>
+                <Link to="/placas" className="hover:text-foreground transition-colors">
+                  Consulta de Placas
+                </Link>
               </li>
               <li>
                 <Link to="/placas/planos" className="hover:text-foreground transition-colors">
                   Planos de Placas
+                </Link>
+              </li>
+              <li>
+                <Link to="/cpf" className="hover:text-foreground transition-colors">
+                  Consulta de CPF
                 </Link>
               </li>
               <li>
@@ -64,7 +59,7 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Placas no Zap. Todos os direitos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Info no Zap. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

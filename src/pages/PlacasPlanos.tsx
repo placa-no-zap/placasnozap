@@ -66,7 +66,7 @@ const PlacasPlanos = () => {
   return (
     <main className="min-h-screen bg-background">
       <SEO
-        title="Planos de Consulta de Placas | Placas no Zap"
+        title="Planos de Consulta de Placas | Info no Zap"
         description="Escolha o plano ideal para consultar o histórico do seu veículo. Consulta Simples R$29,90, Intermediária R$49,90, Avançada R$59,90, Completa R$74,90."
         path="/placas/planos"
       />

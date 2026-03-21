@@ -7,13 +7,13 @@ import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 
-const Index = () => {
+const Placas = () => {
   return (
     <main className="min-h-screen">
       <SEO
-        title="Placas no Zap - Consulta de Placas de Veículos no WhatsApp"
+        title="Consulta de Placas de Veículos no WhatsApp | Info no Zap"
         description="Consulte placas de veículos direto no WhatsApp. Verifique débitos, sinistros, restrições e histórico completo antes de comprar. Rápido, seguro e 100% online."
-        path="/"
+        path="/placas"
         ogDescription="Descubra a real situação do veículo antes de comprar. Consulta rápida via WhatsApp."
       />
       <Header />
@@ -27,4 +27,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Placas;
