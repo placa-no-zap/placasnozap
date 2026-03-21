@@ -23,7 +23,7 @@ const faqItems = [
       <>
         Você poderá abrir um chamado utilizando o{" "}
         <a
-          href="https://placasnozap.com.br/contato"
+          href="https://infonozap.com.br/contato"
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary underline hover:text-primary/80"
@@ -33,7 +33,7 @@ const faqItems = [
         .
       </>
     ),
-    answerText: "Você poderá abrir um chamado utilizando o formulário de contato em https://placasnozap.com.br/contato.",
+    answerText: "Você poderá abrir um chamado utilizando o formulário de contato em https://infonozap.com.br/contato.",
   },
 ];
 

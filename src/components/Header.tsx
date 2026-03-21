@@ -15,8 +15,8 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <img src={logo} alt="Placas no Zap" className="h-16 w-auto" />
-            <span className="font-bold text-xl">Placas no Zap</span>
+            <img src={logo} alt="Info no Zap" className="h-16 w-auto" />
+            <span className="font-bold text-xl">Info no Zap</span>
           </Link>
           <nav aria-label="Planos">
             <DropdownMenu>

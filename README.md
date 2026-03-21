@@ -5,8 +5,8 @@
 ### URLs
 
 - https://lovable.dev/projects/f21f9b21-01d3-495b-975a-4c4384903a56
-- https://vercel.com/placasnozaps-projects/placasnozap/
-- https://placasnozap.com.br
+- https://vercel.com/placasnozaps-projects/placasnozap/ (legacy project; production domain: infonozap.com.br)
+- https://infonozap.com.br
 
 ## How can I edit this code?
 

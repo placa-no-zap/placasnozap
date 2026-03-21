@@ -23,7 +23,7 @@ const CpfPlanos = () => {
   return (
     <main className="min-h-screen bg-background">
       <SEO
-        title="Planos de Consulta de CPF | Placas no Zap"
+        title="Planos de Consulta de CPF | Info no Zap"
         description="Consulte dados cadastrais de um CPF. Plano Simples R$1,99 com situação do CPF, nome, gênero, idade e cidade de nascimento."
         path="/cpf/planos"
       />
