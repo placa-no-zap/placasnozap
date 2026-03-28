@@ -21,6 +21,15 @@ export function formatDate(isoString: string): string {
   }
 }
 
+export function formatDateTime(isoString: string): string {
+  if (!isoString) return "—";
+  try {
+    return format(parseISO(isoString), "dd/MM/yyyy HH:mm:ss");
+  } catch {
+    return "—";
+  }
+}
+
 export function calculateAge(birthDate: string): string {
   if (!birthDate) return "—";
   try {

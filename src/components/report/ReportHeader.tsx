@@ -1,15 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { User, ShieldCheck, Calendar, Users } from "lucide-react";
+import { User, ShieldCheck, Calendar, Users, Clock } from "lucide-react";
 import { BasicData } from "@/types/report";
-import { maskCPF, calculateAge, formatGender } from "@/lib/formatters";
+import { maskCPF, calculateAge, formatGender, formatDateTime } from "@/lib/formatters";
 
 interface ReportHeaderProps {
   basicData: BasicData;
+  queryDate?: string;
 }
 
-const ReportHeader = ({ basicData }: ReportHeaderProps) => {
+const ReportHeader = ({ basicData, queryDate }: ReportHeaderProps) => {
   const isRegular = basicData.TaxIdStatus === "REGULAR";
 
   return (
@@ -34,7 +35,7 @@ const ReportHeader = ({ basicData }: ReportHeaderProps) => {
 
         <Separator className="mb-4" />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           <div className="flex items-center gap-2 text-sm">
             <User className="h-4 w-4 text-muted-foreground flex-shrink-0" />
             <div>
@@ -66,6 +67,16 @@ const ReportHeader = ({ basicData }: ReportHeaderProps) => {
               <p className="font-medium">{basicData.TaxIdStatus}</p>
             </div>
           </div>
+
+          {queryDate && (
+            <div className="flex items-center gap-2 text-sm">
+              <Clock className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+              <div>
+                <p className="text-muted-foreground text-xs">Data da Consulta</p>
+                <p className="font-medium">{formatDateTime(queryDate)}</p>
+              </div>
+            </div>
+          )}
         </div>
       </CardContent>
     </Card>

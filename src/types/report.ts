@@ -1,9 +1,11 @@
 export interface ReportResponse {
   registrationData: {
     Result: RegistrationResult[];
+    QueryDate?: string;
   };
   lawsuits: {
     Result: LawsuitsResult[];
+    QueryDate?: string;
   };
 }
 

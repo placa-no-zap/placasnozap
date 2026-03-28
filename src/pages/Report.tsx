@@ -30,7 +30,12 @@ const Report = () => {
       />
       <Header />
       <div className="container mx-auto px-4 py-8 space-y-6 max-w-4xl">
-        {registration && <ReportHeader basicData={registration.BasicData} />}
+        {registration && (
+          <ReportHeader
+            basicData={registration.BasicData}
+            queryDate={data.registrationData.QueryDate}
+          />
+        )}
         <LawsuitsSummary lawsuits={lawsuits} />
         <Accordion type="single" collapsible className="space-y-0">
           {lawsuits.map((lawsuit, i) => (
