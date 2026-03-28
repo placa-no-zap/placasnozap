@@ -24,7 +24,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Descubra nome, idade e situação cadastral de qualquer CPF. Tudo direto no WhatsApp.
+            Descubra nome, idade, situação cadastral e processos judiciais de qualquer CPF. Tudo direto no WhatsApp.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

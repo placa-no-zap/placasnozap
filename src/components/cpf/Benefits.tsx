@@ -1,4 +1,4 @@
-import { User, Calendar, ShieldCheck, MapPin } from "lucide-react";
+import { User, Calendar, ShieldCheck, Scale } from "lucide-react";
 
 const benefits = [
   {
@@ -15,6 +15,11 @@ const benefits = [
     icon: ShieldCheck,
     title: "Situação do CPF",
     description: "Verifique se o CPF está regular, suspenso, cancelado ou com pendências junto à Receita Federal.",
+  },
+  {
+    icon: Scale,
+    title: "Processos Judiciais",
+    description: "Consulte processos judiciais vinculados ao CPF, com detalhes das partes, movimentações e status de cada processo.",
   },
 ];
 
