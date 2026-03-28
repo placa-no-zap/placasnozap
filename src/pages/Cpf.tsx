@@ -12,9 +12,9 @@ const Cpf = () => {
     <main className="min-h-screen">
       <SEO
         title="Consulta de CPF no WhatsApp | Info no Zap"
-        description="Consulte CPF direto no WhatsApp. Descubra nome, idade, situação cadastral e cidade de nascimento. Rápido, seguro e 100% online."
+        description="Consulte CPF direto no WhatsApp. Descubra nome, idade, situação cadastral e processos judiciais. Rápido, seguro e 100% online."
         path="/cpf"
-        ogDescription="Descubra nome, idade, situação cadastral e cidade de nascimento de qualquer CPF. Tudo direto no WhatsApp."
+        ogDescription="Descubra nome, idade, situação cadastral e processos judiciais de qualquer CPF. Tudo direto no WhatsApp."
       />
       <Header />
       <HeroSection />

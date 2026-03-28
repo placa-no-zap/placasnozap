@@ -31,7 +31,7 @@ const Home = () => {
             direto no WhatsApp
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Escolha o serviço que precisa: histórico de veículos ou dados cadastrais de CPF. Tudo com atendimento humano pelo WhatsApp.
+            Escolha o serviço que precisa: histórico de veículos ou dados cadastrais de CPF. Tudo pelo WhatsApp.
           </p>
         </div>
       </section>
@@ -67,7 +67,7 @@ const Home = () => {
                 </div>
                 <CardTitle>Consulta de CPF</CardTitle>
                 <CardDescription>
-                  Nome, idade, situação cadastral e cidade de nascimento de forma rápida e segura.
+                  Nome, idade e situação cadastral de forma rápida e segura.
                 </CardDescription>
               </CardHeader>
               <CardContent className="mt-auto pt-0">

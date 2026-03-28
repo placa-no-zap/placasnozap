@@ -11,6 +11,7 @@ import Cpf from "./pages/Cpf";
 import CpfPlanos from "./pages/CpfPlanos";
 import NotFound from "./pages/NotFound";
 import PlacasPlanos from "./pages/PlacasPlanos";
+import Report from "./pages/Report";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/placas/planos" element={<PlacasPlanos />} />
             <Route path="/cpf" element={<Cpf />} />
             <Route path="/cpf/planos" element={<CpfPlanos />} />
+            <Route path="/relatorio/cpf/processos/:id" element={<Report />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -38,7 +38,7 @@ const faqItems = [
   {
     question: "Quais informações são retornadas na consulta de CPF?",
     answer:
-      "Você recebe: nome completo, gênero, idade, situação do CPF junto à Receita Federal, e cidade e estado de nascimento.",
+      "No plano Simples você recebe: nome completo, gênero, idade e situação do CPF junto à Receita Federal. No plano Processos Judiciais você recebe, além dos dados cadastrais, um relatório completo com todos os processos judiciais vinculados ao CPF, incluindo partes envolvidas e histórico de movimentações.",
   },
 ];
 
