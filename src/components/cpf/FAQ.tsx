@@ -38,7 +38,7 @@ const faqItems = [
   {
     question: "Quais informações são retornadas na consulta de CPF?",
     answer:
-      "Você recebe: nome completo, gênero, idade, situação do CPF junto à Receita Federal, e cidade e estado de nascimento.",
+      "Você recebe: nome completo, gênero, idade e situação do CPF junto à Receita Federal.",
   },
 ];
 

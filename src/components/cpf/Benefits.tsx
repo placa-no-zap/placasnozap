@@ -16,11 +16,6 @@ const benefits = [
     title: "Situação do CPF",
     description: "Verifique se o CPF está regular, suspenso, cancelado ou com pendências junto à Receita Federal.",
   },
-  {
-    icon: MapPin,
-    title: "Cidade e Estado de Nascimento",
-    description: "Identifique a cidade e o estado de nascimento registrados no CPF.",
-  },
 ];
 
 const Benefits = () => {

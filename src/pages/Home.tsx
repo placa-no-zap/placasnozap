@@ -67,7 +67,7 @@ const Home = () => {
                 </div>
                 <CardTitle>Consulta de CPF</CardTitle>
                 <CardDescription>
-                  Nome, idade, situação cadastral e cidade de nascimento de forma rápida e segura.
+                  Nome, idade e situação cadastral de forma rápida e segura.
                 </CardDescription>
               </CardHeader>
               <CardContent className="mt-auto pt-0">

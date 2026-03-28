@@ -14,7 +14,6 @@ const plans = [
       "Nome",
       "Genero",
       "Idade",
-      "Cidade e Estado de Nascimento",
     ],
   },
 ];
@@ -24,7 +23,7 @@ const CpfPlanos = () => {
     <main className="min-h-screen bg-background">
       <SEO
         title="Planos de Consulta de CPF | Info no Zap"
-        description="Consulte dados cadastrais de um CPF. Plano Simples R$1,99 com situação do CPF, nome, gênero, idade e cidade de nascimento."
+        description="Consulte dados cadastrais de um CPF. Plano Simples R$1,99 com situação do CPF, nome, gênero e idade."
         path="/cpf/planos"
       />
       <Header />
